@@ -1,7 +1,7 @@
 {
-    "name": "next-mdx-static-blog-kit",
+    "name": "nextjs mdx blog",
     "version": "1.0.0",
-    "description": "A starter kit for creating a static website blog using Next.js and MDX",
+    "description": "Base for blog project",
     "scripts": {
         "dev": "NODE_ENV=development next",
         "build": "NODE_ENV=production next build",
@@ -17,7 +17,7 @@
         "blog",
         "mdx"
     ],
-    "author": "Loren Stewart",
+    "author": "Wendy Kelly",
     "license": "ISC",
     "bin": {
         "blog": "cli.js"
