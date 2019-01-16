@@ -42,7 +42,7 @@ export function createSEOConfig(data) {
                     url: config.websiteLogo,
                     width: 280,
                     height: 280,
-                    alt: "Demo image for Next.js MDX Blog kit"
+                    alt: "Demo image for Wendy Kiana Kelly"
                 }
             ],
             site_name: config.siteName

@@ -19,7 +19,7 @@ export default class ReadingProgress extends Component {
 
     render() {
         const style = {
-            backgroundColor: config.css.primaryColor,
+            backgroundColor: `${config.css.primaryColor}`,
             height: "5px",
             position: "fixed",
             top: 0,

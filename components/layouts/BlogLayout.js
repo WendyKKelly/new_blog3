@@ -4,7 +4,7 @@ export default ({ children }) => (
     <div className="blog-layout">
         {children}
         <style jsx>{`
-            margin: auto;
+              margin: auto;
         `}</style>
     </div>
 );

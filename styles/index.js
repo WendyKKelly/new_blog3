@@ -15,26 +15,48 @@ export const centeredPageStyles = css`
         align-items: center;
         justify-content: center;
         flex-direction: column;
-    }
+        background: ${config.css.black};
 `;
 
 // used in _app.js
 export const globalStyles = css.global`
 @font-face {
-    font-family: "Abril Fatface";
-    font-display: auto; /* Important for performance */
-    src: url("/static/fonts/Abril-Fatface.woff2") format("woff2");
-    font-style: normal;
+  font-family: 'ArimaKoshi Regular';
+  src: url('/static/fonts/ArimaKoshi-Regular.otf') format('opentype');
 }
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
 html {
     scroll-behavior: smooth;
 }
 body {
+    margin-left: 2em;
+    font-size: .5em;
     position: relative;
     top: 0;
-    margin: 0;
     padding: 0;
-    color: ${config.css.black};
+    color: ${config.css.primaryColor};
+    background: ${config.css.backgroundColor};
 }
 #__next {
     display: flex;
@@ -43,10 +65,10 @@ body {
     min-height: 100vh;
 }
 .footer {
-    background: #fff;
+    background: ${config.css.backgroundColor};
     height: 80px;
     width: 100%;
-    border-top: 2px solid ${config.css.lightGray};
+    border-top: 15px solid #eeeeee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,11 +89,128 @@ h5,
 h5 > *,
 h6,
 h6 > * {
-    font-family: "Abril Fatface";
+    font-family: "ArimaKoshi Regular";
     letter-spacing: 1px;
 }
 strong {
     color: ${config.css.accentColor}
+}
+
+
+
+#space {
+  height: 20rem;
+}
+#container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  z-index: 2;
+}
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+
+
+
+h1 {
+	font-size: 24px;
+	margin: 10px 0 0 0;
+	font-weight: lighter;
+	text-transform: uppercase;
+	color: #eeeeee;
+}
+
+p {
+	font-size: 12px;
+	font-weight: light;
+	color: #eeeeee;
+}
+
+
+#balloon {
+	height: 280px;
+  width: 190px;
+  align: right;
+  margin-left: 90%;
+  position: absolute;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+	z-index: 1;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  animation: float 6s ease-in-out infinite;
+  -moz-transform: rotate(25deg);
+  background: ${config.css.accentColor};
+
+
+}
+path {
+  fill: transparent;
+  z-index: -2;
+
+}
+
+text {
+  fill: #eeeeee;
+}
+
+
+#balloon:before {
+  color: #eeeeee;
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-44px;
+  z-index:-1;
+  content:"▲";
+  font-size: 5em;
+}
+
+  /* BAllOON 0*/
+  @-webkit-keyframes balloon3 {
+    0%,100%{ -webkit-transform:translate(0, -10px) rotate(6eg);}
+    50%{ -webkit-transform:translate(-20px, 30px) rotate(-8deg); }
+  }
+  @-moz-keyframes balloon3 {
+   0%,100%{ -moz-transform:translate(0, -10px) rotate(6eg);}
+    50%{ -moz-transform:translate(-20px, 30px) rotate(-8deg); }
+  }
+  @-o-keyframes balloon3 {
+   0%,100%{ -o-transform:translate(0, -10px) rotate(6eg);}
+    50%{ -o-transform:translate(-20px, 30px) rotate(-8deg); }
+  }
+  @keyframes balloon3 {
+   0%,100%{ transform:translate(0, -10px) rotate(6eg);}
+    50%{ transform:translate(-20px, 30px) rotate(-8deg); }
+  }
+
+
+.content {
+	width: 100%;
+	max-width: 600px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: center;
 }
 .search-layout,
 .blog-layout,
@@ -94,22 +233,22 @@ img.img-centered {
 .icon-button {
     outline: none;
     border: none;
-    background: ${config.css.backgroundColor};
+    background: ${config.css.accentColor};
 }
 .icon-button.hamburger {
     position: fixed;
     left: 0px;
     top: 0px;
     z-index: 3; /* the navigation menu is z-index: 4 */
-    border: 1px solid ${config.css.lightGray};
+    border: 1px solid ${config.css.black};
     padding-top: 4px;
     border-radius: 3px;
 }
 a {
-    color: ${config.css.accentColor};
+    color: ${config.css.primaryColor};
 }
 label {
-    color: ${config.css.black};
+    color: ${config.css.accentColor};
     font-weight: 600;
     font-family: sans-serif;
     font-size: 18px;
@@ -122,6 +261,7 @@ span,
 li,
 ul,
 ol {
+    font-family: ArimaKoshi Regular;
     font-size: 18px;
     line-height: 24px;
     word-break: break-word /* This prevents a bug with the reading progress bar. Leave this style here unless you are removing the reading progress bar. */
@@ -131,4 +271,6 @@ code > span {
     font-size: inherit; /* make sure code font size is set in <CodeBlock /> */
     background: inherit !important; /* Fixes code block style bug*/
 }
+
+
 `;
