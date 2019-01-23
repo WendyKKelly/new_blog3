@@ -1,10 +1,12 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import { SocialIcon } from "react-social-icons";
 import { config } from "../config/config.yml";
 
 export default function Footer() {
     return (
         <div className="footer">
-            &copy; 2018 - {new Date().getFullYear()} {config.author}
-        </div>
+<SocialIcon url="http://twitter.com/wendykkelly" network="twitter" bgColor="#ff616b" /> <SocialIcon url="http://linkedin.com/in/wendykkelly" />
+</div>
     );
 }

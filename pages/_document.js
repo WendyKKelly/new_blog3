@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
                         name="viewport"
                         content="width=device-width, initial-scale=1"
                     />
+                    <meta charSet='utf-8'/>
                     <link rel="icon" href="/static/icons/favicon.ico" />
 
                     <link rel="manifest" href="/static/manifest.json" />
@@ -66,7 +67,7 @@ export default class MyDocument extends Document {
                         name="msapplication-TileImage"
                         content="/static/icons/icon_150.png"
                     />
-                    {/* 
+                    {/*
                     <script>
                          Add a Google Analytics script here.
                     </script>

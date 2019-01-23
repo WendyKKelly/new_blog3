@@ -1,26 +1,74 @@
-
+import Link from "next/link";
+import Emoji from "../components/Emoji";
 
 
 export const meta = {
     title: "Wendy Kiana Kelly",
     tags: ["Next.js", "MDX"],
     layout: "page",
-    publishDate: "2011-01-01",
+    publishDate: "2019-01-01",
     modifiedDate: false,
     seoDescription: "This is the home page."
 };
 
-<div id="background">
 
-<div id="balloon"></div>
-</div>
 
-<svg viewBox="50 0 425 300">
-  <path id="curve" d="M6,150C49.63,93,105.79,36.65,156.2,47.55,207.89,58.74,213,131.91,264,150c40.67,14.43,108.57-6.91,229-140" />
+
+
+<svg id="home" viewBox="0 0 470 200">
+<g id="shape">
+
+
+<g id="sakura">
+  <g id="segment" className="segment">
+    <path className="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
+    <path className="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+    </g>
+  <g id="quadrant">
+    <use xlinkHref="#segment"/>
+    <use xlinkHref="#segment" transform="rotate(18)"/>
+    <use xlinkHref="#segment" transform="rotate(36)"/>
+    <use xlinkHref="#segment" transform="rotate(54)"/>
+    <use xlinkHref="#segment" transform="rotate(72)"/>
+    </g>
+  <g id="petals">
+    <use xlinkHref="#quadrant"/>
+    <use xlinkHref="#quadrant" transform="rotate(90)"/>
+    <use xlinkHref="#quadrant" transform="rotate(180)"/>
+    <use xlinkHref="#quadrant" transform="rotate(270)"/>
+    </g>
+  <radialGradient id="fade" cx="0" cy="0" r="20"
+      gradientUnits="userSpaceOnUse">
+    <stop id="fade-stop-1" offset="33%"/>
+    <stop id="fade-stop-2" offset="95%"/>
+    </radialGradient>
+
+
+
+
+<g id="flower">
+  <circle id="overlay" cx="0" cy="0" r="20"
+    stroke="none" fill="url(#fade)"/>
+  <use id="outer-petals" xlinkHref="#petals"/>
+  <use id="inner-petals" xlinkHref="#petals"
+    transform="rotate(9) scale(0.33)"/>
+  </g>
+
+</g>
+
+  <path id="curve" d="M20,150C49.63,93,105.79,36.65,156.2,47.55,207.89,58.74,213,131.91,264,150c40.67,14.43,229-89,350-110" />
   <text x="5">
     <textPath xlinkHref="#curve">
-      I am on a happy path trying to transition to front end development come along with me to chart this path to a new mid-life career - hope to see you soon either here or on twitter 
+      Welcome to my audacious goal for 2019: Craft-Change from writing to front-end development. Come <Link prefetch href={`../blog/post-five-what-I-am-learning`}><a>learn with me</a></Link>, <Link prefetch href={`../blog/post-seven-who-I-admire`}><a>be inspired with me</a></Link>, <Link prefetch href={`../blog/post-eight-hire-me`}><a>or hire me</a></Link>! <Emoji symbol="🌸" label="cherry-blossom"/>
 
   </textPath>
   </text>
+
+</g>
 </svg>
+
+<div id="phone"><h1>Welcome! I'm Wendy.</h1> <h3>
+    This year I will Craft-Change ~ </h3>
+    <h3>From writing to front-end development
+</h3> <ul><li> <Link prefetch href={`../blog/post-five-what-I-am-learning`}><a>learn with me</a></Link></li><li> <Link prefetch href={`../blog/post-seven-who-I-admire`}><a>be inspired with me</a></Link></li><li> <Link prefetch href={`../blog/post-eight-hire-me`}><a>or hire me</a></Link>!</li></ul></div>
+<div id="paraStyle"><p>I have written professionally since 1994. Writing paid the bills while I homeschooled my 4 boys, it gave me a chance to find my voice. I will always <Emoji symbol="💖" label="heart" size={200}/> writing. But I have discovered front end design and development, and, well...I'm smitten.</p></div>

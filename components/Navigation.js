@@ -20,6 +20,7 @@ export const NavigationItem = props => (
             a {
                 text-decoration: none;
                 font-size: 20px;
+                color: ${config.css.black};
             }
         `}</style>
     </li>

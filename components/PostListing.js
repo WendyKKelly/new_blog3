@@ -10,7 +10,13 @@ export default function PostListing(props) {
                 <Link prefetch href={`/blog/${post.name}`}>
                     <a>{post.title}</a>
                 </Link>
+
             </h2>
+            <p key={`${post.name}-headline`}>
+            {post.seoDescription}<h1></h1>     
+            <Link prefetch href={`/blog/${post.name}`}><a>Read More...</a>
+            </Link>
+            </p>
             <TagBlock tags={post.tags} />
         </React.Fragment>
     );
