@@ -1,13 +1,13 @@
 import { Component } from "react";
 
 export const meta = {
-    title: "JavaScript Page",
+    title: "Continuous Improvement",
     // The tags are used for SEO in the header property: `<meta name="keywords" content={stringOfAllPostTags} />`
     tags: ["tag-1", "tag-2"], 
-    layout: "page",
-    publishDate: "2011-01-01",
+    layout: "post",
+    publishDate: "2019-03-07",
     modifiedDate: false, // "If used it must be in 'YYYY-MM-DD format' like publishDate"
-    seoDescription: "In this post I <keyword> with <keyword>. And blah blah.",
+    seoDescription: "Wow. Looking back on this long tail learning curve.",
     exclude: false,
     hideProgressBar: false,
 }
