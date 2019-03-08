@@ -75,7 +75,7 @@ strong {
 }
 h1 {
   font-family: ff-tisa-sans-web-pro, sans-serif;
-	font-size: 4vw;
+	font-size: 3vw;
 	margin: .69vw 0 0 0;
 	font-weight: lighter;
 	text-transform: uppercase;
@@ -119,6 +119,21 @@ a {
         line-height: 3.5vmin;
         word-break: break-word /* This prevents a bug with the reading progress bar. Leave this style here unless you are removing the reading progress bar. */
     }
+    .X {
+      fill: pink;
+
+    }
+
+    .X:hover {
+      fill: yellowgreen;
+      stroke: yellowgreen;
+    }
+
+    /* Footer styling */
+
+  .social-icon {
+      border-bottom: none;
+    }
     /* Home page small screen styling */
 
     #paraStyle {
@@ -133,6 +148,7 @@ a {
   }
 
 /* Home page svg styling */
+
 
 #curve {
   fill: transparent;
@@ -210,8 +226,20 @@ a {
       fill:  ${config.css.midPink};
     }
 
-/* About page css chape -- balloon */
+    #link {
+        text-decoration-line: underline;
+        text-decoration-stroke: black;
+        text-decoration-color: black;
 
+    }
+    #line {
+      fill: none;
+      stroke: red;
+      stroke-width: 1;
+    }
+
+
+/* About page css chape -- balloon */
 #balloon {
 	height: 25vmin;
   width: 15vmin;

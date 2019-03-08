@@ -2,7 +2,7 @@ import React from "react";
 import PostListing from "../components/PostListing";
 
 export const meta = {
-    title: "What Do I Know?",
+    title: "Wendy Kelly",
     tags: ["Next.js", "MDX"],
     layout: "blog-post-list",
     publishDate: "2011-01-01",
