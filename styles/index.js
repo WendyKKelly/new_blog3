@@ -292,10 +292,13 @@ a {
 .search-layout,
 .blog-layout,
 .blog-post-list {
-    max-width: 740px;
-    max-height: auto;
-    padding: 40px 20px 100px 20px;
-    position: relative;
+  height: auto;
+  width: 98vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .blog-layout > div {
     display: flex;
