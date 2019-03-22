@@ -3,8 +3,10 @@ import { centeredPageStyles } from "../styles";
 import Emoji from "../components/Emoji";
 import Link from "next/link";
 
+
 export const meta = {
     title: "About",
+
     tags: ["Next.js", "MDX"],
     layout: "page",
     publishDate: "2011-01-01",
@@ -17,7 +19,7 @@ function About() {
         <div className="centered-container">
             <h1>Hello, I'm Wendy <Emoji symbol="🌸" label="cherry-blossom" size={500}/> </h1>
             <h2><Emoji symbol="✍" label="writer" size={200}/>I write fiction & non-fiction.</h2>
-            <h2><Emoji symbol="👩‍💻" label="technologist" size={200}/> I <Emoji symbol="💖" label="heart" size={200}/> Programming.</h2>
+            <h2><Emoji symbol="👩‍💻" label="technologist" size={200}/> I <Emoji symbol="💖" label="heart" size={200}/> programming.</h2>
             <h2><Emoji symbol="🧘" label="yoga" size={200}/> I enjoy yoga </h2>
             <h2><Emoji symbol="🧖‍♀️" label="sauna" size={200}/> ...and hotsprings and sauna and cold pools.</h2>
             <h2><Emoji symbol="🤸‍♀️" label="cartwheel" size={200}/> Play is extremely important to me.</h2>
