@@ -17,7 +17,7 @@ export default class Index extends Component {
         return (
             <div>
                 <p>
-                    It is important that all <code>meta</code> properties have values. Without them, your website will have poor SEO resulting in your content reaching fewer people.
+                    
                 </p>
             </div>
         );
