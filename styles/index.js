@@ -287,6 +287,80 @@ a {
   }
 }
 
+/* about page etc */
+
+
+#writer:hover  #title {
+	display: block;
+}
+
+#title {
+	display: none;
+
+	color: #ffffff;
+	background-color: #000000;
+  text-align: right;
+
+  width: 95vw;
+  padding: 10px;
+}
+
+#writer2:hover #title2 {
+	display: block;
+}
+
+#title2 {
+	display: none;
+
+	color: #ffffff;
+	background-color: #000000;
+  text-align: center;
+
+  width: 95vw;
+  padding: 10px;
+}
+#writer3:hover #title3 {
+	display: block;
+}
+
+#title3 {
+	display: none;
+
+	color: #ffffff;
+	background-color: #000000;
+  text-align: center;
+
+  width: 95vw;
+  padding: 10px;
+}
+#writer4:hover #title4 {
+	display: block;
+}
+
+#title4 {
+	display: none;
+
+	color: #ffffff;
+	background-color: #000000;
+  text-align: center;
+
+  width: 95vw;
+  padding: 10px;
+}
+#writer5:hover + #title5 {
+	display: block;
+}
+
+#title5 {
+	display: none;
+
+	color: #ffffff;
+	background-color: #000000;
+  text-align: center;
+
+  width: 95vw;
+  padding: 10px;
+}
 /* etc */
 
 .search-layout,

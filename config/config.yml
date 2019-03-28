@@ -20,6 +20,8 @@ config:
         - { text: Blog, link: /blog }
         - { text: About, link: /about }
         - { text: Film, link: /film }
+        - { text: Batman, link: /batman }
+
 
 
     css:
